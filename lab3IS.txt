@@ -1,0 +1,25 @@
+Nume: Extindere imprumut carte
+Scurta descriere: dupa imprumutarea unei carti, un client vrea sa extinda imprumutul acelei carti 
+Preconditii: Clientul trebuie sa fie mambru al bibliotecii (auth)
+Postconditii: Clientul trebuie sa fi imprumutat deja o carte pentru a putea extinde imprumutul. Cartea trebuie sa fie valabila in continuare, iar limita sa nu fie depasita de client.
+
+Situatii de eroare:Clientul nu a imprumutat o carte; Cartea nu este valabila, limita a fost depasita, nu s-a ales tipul  de imprumut
+
+Starea sistemului in caz de eroare: Clientului nu poate extinde imprumutul
+
+Actorii: client
+
+Declansator: Clientul vrea sa extinda imprumutul unei carti
+
+Proces standard :
+1. Verificare autentificare
+2. extindere imprumut carte 
+3. verificare daca clientul a imprumutat carte
+4. Verificare valabilitate carte
+5. Verificare depasire limita
+6. Confirmare imprumut carte
+
+Procesul alternativ
+1`. Autentificare esuata
+3`. Clientul nu a imprumutat carte
+4`. Limita imprumut carte
